@@ -36,37 +36,14 @@ let list1 = [
     Repas: "végétarien",
   },
 ];
+const countRepas = list1.reduce((acc, item) => {
+  let repas = item.Repas;
+  if (acc[repas]) {
+    acc[repas]++;
+  } else {
+    acc[repas] = 1;
+  }
+  return acc;
+}, {});
 
-const countRepas = (names, repas) => {
-  let count = {};
-  list1.forEach((item) => {
-    if (count[item.Repas]) {
-      count[item.Repas]++;
-    } else {
-      count[item.Repas] = 1;
-    }
-  });
-  let name = list1.map((nom) => `${nom.Repas} => ${nom.FirstName}`);
-  console.log(name);
-
-  return count;
-};
-
-console.log(countRepas());
-
-/*let reapas = list1.reduce((acc, item)=>{
-  (acc[item.Repas]=(acc[item.Repas]||0)+1,acc),{}
-});*/
-
-const xo = (str) => {
-  let x = str.match(/x/gi);
-  let o = str.match(/o/gi);
-  return (x && x.length) === (o && o.length);
-};
-
-console.log(xo("xO"));
-
-let comb = str=>[...str].sort().join('')
-list1.map((v,index)=>{
-  console.log(index);
-})
+console.log(countRepas);
