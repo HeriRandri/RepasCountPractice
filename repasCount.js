@@ -53,3 +53,20 @@ const countRepas = (names, repas) => {
 };
 
 console.log(countRepas());
+
+/*let reapas = list1.reduce((acc, item)=>{
+  (acc[item.Repas]=(acc[item.Repas]||0)+1,acc),{}
+});*/
+
+const xo = (str) => {
+  let x = str.match(/x/gi);
+  let o = str.match(/o/gi);
+  return (x && x.length) === (o && o.length);
+};
+
+console.log(xo("xO"));
+
+let comb = str=>[...str].sort().join('')
+list1.map((v,index)=>{
+  console.log(index);
+})
