@@ -38,8 +38,6 @@ let list1 = [
 ];
 
 const countRepas = (names, repas) => {
-  let resultat = [];
-  for (let i = 0; i < names.length; i++) {}
   let count = {};
   list1.forEach((item) => {
     if (count[item.Repas]) {
@@ -53,8 +51,5 @@ const countRepas = (names, repas) => {
 
   return count;
 };
-let name;
-list1.forEach((name) => (name = name.FirstName));
-console.log(countRepas(name, list1.repas));
 
-let nom = list1.forEach((noms) => noms.FirstName);
+console.log(countRepas());
