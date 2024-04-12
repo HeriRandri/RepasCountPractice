@@ -36,6 +36,7 @@ let list1 = [
     Repas: "végétarien",
   },
 ];
+
 const countRepas = list1.reduce((acc, item) => {
   let repas = item.Repas;
   if (acc[repas]) {
@@ -47,3 +48,16 @@ const countRepas = list1.reduce((acc, item) => {
 }, {});
 
 console.log(countRepas);
+
+// Compression d’une phrase
+
+const removeEscpace = (str) => {
+  let resultat;
+  let ponctuation = /[.,\/#!$%?\^&\*;:{}=\-_`~()]/g;
+  resultat = str.split(" ").join("").replace(ponctuation, "");
+  return resultat;
+};
+
+let string =
+  " Supprimez  les ponctuations,  # espaces et nombres d’une phrase donnée.? ";
+console.log(removeEscpace(string));
