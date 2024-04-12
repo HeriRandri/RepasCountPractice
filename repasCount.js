@@ -1,4 +1,4 @@
-let list1 = [
+/*let list1 = [
   {
     FirstName: "Noah",
     lastName: "M.",
@@ -47,7 +47,7 @@ const countRepas = list1.reduce((acc, item) => {
   return acc;
 }, {});
 
-console.log(countRepas);
+console.log(countRepas);*/
 
 // Compression d’une phrase
 
